@@ -16,12 +16,14 @@ const Agendamentos = sequelize.define("agendamentos", {
   origem: {
     type: db.Sequelize.STRING
   },
-  dataNascimento: {
+  dataContato: {
     type: db.Sequelize.DATE
   },
   observacao: {
     type: db.Sequelize.TEXT
   }
 });
+
+// Agendamentos.sync({force: true})
 
 module.exports = Agendamentos;

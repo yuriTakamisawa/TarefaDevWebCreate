@@ -1,0 +1,8 @@
+//Códigos de intalações utilizadas na aula de Desenvolvimento Web II
+
+npm install express --save
+npm install nodemon -g
+npm install --save mysql2
+npm install --save sequelize
+npm install express-handlebars --save
+npm install body-parser --save

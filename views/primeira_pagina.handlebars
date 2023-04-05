@@ -37,7 +37,7 @@
             <p> <strong> Cadastrar - Agendamento de Potenciais Clientes:</strong></p>
             <p>Sistema utilizado para agendamento de serviços.</p>
         </div>
-        <form action="/cadastrar" method="POST">
+        <form action="/cadastrar" method="post">
         <div class="row p-4">
                 <div class="mb-3">
                     <label for="lblNome" class="form-label">Nome:</label>
@@ -45,7 +45,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="lblTelefone" class="form-label">Telefone:</label>
-                    <input type="text" class="form-control" id="telefone" placeholder="(xx) xxxxx-xxxx" name="nome" aria-activedescendant="emailhelp">
+                    <input type="text" class="form-control" id="telefone" placeholder="(xx) xxxxx-xxxx" name="telefone" aria-activedescendant="emailhelp">
                 </div>
             
         
@@ -58,7 +58,7 @@
             </div>
             <div class="mb-3">
                 <label for="lblDataContato" class="form-label">Data de Contato:</label>
-                <input type="date" class="form-control" id="dataContato" placeholder="dd/mm/aa" name="dataContato" aria-activedescendant="emailhelp">
+                <input type="date" class="form-control" id="dataContato" placeholder="dd/mm/aa" name="dataContato">
             </div>
             <div class="mb-3">
                     <label for="lblObservacao" class="form-label">Observação</label>
@@ -66,7 +66,7 @@
             </div>
             <!-- enviar -->
             <div class="col">
-                <button type="button" class="btn btn-primary">Cadastrar</button>
+                <button type="submit" class="btn btn-primary" >Cadastrar</button>
             </div>
         </div>
         </form>

@@ -16,13 +16,19 @@ app.get("/",function(req, res){
 })
 
 app.post("/cadastrar", function(req, res){
-    post.create({nome: req.body.nome
-    }).then(function(){
-        res.send("Dados enviados com sucesso!")
-    }).catch(function(erro){
-        res.send("Falha ao cadastra: "+erro)
+        post.create({
+            nome: req.body.nome,
+            telefone: req.body.telefone,
+            origem: req.body.origem,
+            dataContato: req.body.dataContato,
+            observacao: req.body.observacao
+        }).then(function(){
+            res.send("Dados enviados com sucesso!")
+        }).catch(function(erro){
+            res.send("Falha ao cadastrar: " + erro)
+        })
     })
-})
+
 
 app.listen(8081, function(){
     console.log("servidor ativo")
