@@ -65,9 +65,12 @@
                                     <div class="col ">
                                         Observação
                                     </div>
+                                    <div class="col">
+                                        
+                                    </div>
                                 </div>
                             </div>
-                            <div class="container bg-light text-dark">
+                            <div class="container bg-light text-dark  text-center">
                                 {{#each post}}
                                 {{#dataValues}}
                                 <div class="row ">
@@ -85,6 +88,9 @@
                                     </div>
                                     <div class="col border border-dark">
                                         {{observacao}}
+                                    </div>
+                                    <div class="col border border-dark ">
+                                        <a href="/delete/{{id}}" class="btn btn-primary"> Delete</a>
                                     </div>
                                 </div>
                                 {{/dataValues}}

@@ -3,6 +3,10 @@ const express = require("express")
 const app = express()
 const handlebars = require("express-handlebars").engine
 const post = require("./models/post")
+const Agendamentos = require("./models/post")
+
+
+
 
 app.engine("handlebars",handlebars({defaultLayout: "main"}))
 app.set("view engine", "handlebars")
@@ -34,6 +38,17 @@ app.get("/consulta", function(req, res){
         res.render("consulta", {post})
     }).catch(function(erro){
         console.log("Erro ao carregar banco de dados: "+ erro)
+    })
+})
+
+app.get("/delete/:id", function(req, res){
+    post.destroy({
+        where: {id: req.params.id }, 
+        force: true
+    }).then(function(){
+        res.redirect("/consulta")   
+    }).catch(function(erro){
+        res.send("Falha ao deletar: "+erro)
     })
 })
 

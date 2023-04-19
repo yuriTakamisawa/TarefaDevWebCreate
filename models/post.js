@@ -1,5 +1,7 @@
 const db = require("./banco");
-const { Sequelize } = require("sequelize");
+const { Sequelize, where } = require("sequelize");
+
+
 
 const sequelize = new Sequelize("test", "root", "", {
   host: "localhost",
@@ -24,6 +26,6 @@ const Agendamentos = sequelize.define("agendamentos", {
   }
 });
 
-// Agendamentos.sync({force: true})
+Agendamentos.sync({force: true})
 
 module.exports = Agendamentos;
