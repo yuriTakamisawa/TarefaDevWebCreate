@@ -66,7 +66,7 @@
                                         Observação
                                     </div>
                                     <div class="col">
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -90,7 +90,12 @@
                                         {{observacao}}
                                     </div>
                                     <div class="col border border-dark ">
-                                        <a href="/delete/{{id}}" class="btn btn-primary"> Delete</a>
+                                        <div class="col">
+                                            <button type="button" class="btn btn-primary"><a href="/editar/{{id}}"
+                                                    style="color:inherit">Editar</a></button>
+                                            <button type="button" class="btn btn-primary"><a href="/excluir/{{id}}"
+                                                    style="color:inherit">Excluir</a></button>
+                                        </div>
                                     </div>
                                 </div>
                                 {{/dataValues}}
