@@ -19,7 +19,7 @@ const Agendamentos = sequelize.define("agendamentos", {
     type: db.Sequelize.STRING
   },
   dataContato: {
-    type: db.Sequelize.DATE
+    type: db.Sequelize.DATEONLY
   },
   observacao: {
     type: db.Sequelize.TEXT
