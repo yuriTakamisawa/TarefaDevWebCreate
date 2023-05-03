@@ -1,5 +1,7 @@
 const db = require("./banco");
-const { Sequelize } = require("sequelize");
+const { Sequelize, where } = require("sequelize");
+
+
 
 const sequelize = new Sequelize("test", "root", "", {
   host: "localhost",
@@ -17,13 +19,13 @@ const Agendamentos = sequelize.define("agendamentos", {
     type: db.Sequelize.STRING
   },
   dataContato: {
-    type: db.Sequelize.DATE
+    type: db.Sequelize.DATEONLY
   },
   observacao: {
     type: db.Sequelize.TEXT
   }
 });
 
-// Agendamentos.sync({force: true})
+Agendamentos.sync({force: true})
 
 module.exports = Agendamentos;
